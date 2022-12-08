@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="validjs.js"></script>
+
+   </head>
+   <body>
+      
+      <div class="wrapper">
+         <div class="title">
+            Login 
+         </div>
+         <form action="parth.html" >
+            <div class="field">
+               <input type="email"  Id="email" required>
+               <label>Email Address</label>
+            </div>
+            <div class="field">
+               <input type="password" id="pass" required>
+               <label>Password</label>
+            </div>
+            <div class="content">
+               <!-- <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+               </div> -->
+               <!-- <div class="pass-link">
+                  <a href="#">Forgot password?</a>
+               </div> -->
+            </div>
+            <div class="field">
+               <input type="submit" value="Login" onclick="btn2()" >
+            </div>
+            <div class="signup-link">
+               Not a member? <a href="signup.html">Signup now</a>
+            </div>
+            <div class="signup-link">
+               <center><a href="parth.html">Home></a></center>
+            </div>
+
+         </form>
+         
+      </div>
+      <footer>
+
+         <!-- </div>
+      </div>	 -->
+      
+      
+      
+      
+            <!-- <div class="item graphics" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="100">
+               <img src="img/p7.jpg" width="100" height="100">
+            </div>
+            <div class="item graphics" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="200">
+               <img src="img/p8.jpg" width="100" height="100">
+            </div>
+            <div class="item graphics" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="300">
+               <img src="img/p9.jpg" width="100" height="100">
+            </div> -->
+      
+      
+         </div>
+      
+      </section>
+      <footer>
+      
+      </div>
+      </div>	
+      
+      
+      <div class="f-contact" data-aos="zoom-in-up" data-aos-offset="200">
+      
+      
+      
+      <div>
+         <h1>Useful links</h1>
+         <p>About us</p>
+         <p>Gallery</p>
+         <p></p>
+         <p></p>
+         
+      </div>
+      
+      <div>
+         <h1>Details</h1>
+         <p>Photographers</p>
+         <p>Gallery</p>
+         <p>About</p>
+         
+      
+      </div>
+      
+      <div>
+         <h1>Help & Support</h1>
+         <p>Privacy policy</p>
+         <p>Term & conditions</p>
+         <p>Technical support</p>
+         <p>Customer care</p>
+      
+      </div>
+      
+         <center><div>
+            <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp"></i>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i>
+            <a href="https://www.facebook.com/"><i class="fa fa-telegram"></i>
+            <a href="https://help.twitter.com"><i class="fa fa-twitter"></i>
+      </div></center>
+      
+      </div>
+      
+      
+      
+      
+      
+      </footer>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      
+      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+      <script>
+      $('.portfolio-item').isotope({
+      // options
+      itemSelector: '.item',
+      layoutMode: 'fitRows'
+      });
+      $('.portfolio-menu ul li').click(function(){
+      $('.portfolio-menu ul li').removeClass('active');
+      $(this).addClass('active');
+      
+         var selector = $(this).attr('data-filter');
+      $('.portfolio-item').isotope({
+         filter:selector
+      });
+      return false;
+      });
+      </script>
+      
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+      AOS.init();
+
+
+      
+function btn2() {
+  
+
+    var emailcheck = document.getElementById("email").value;
+    var pattern1 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    var phonecheck = document.getElementById("pass").value;
+    var pattern3 = /^[0-9]+$/
+    
+
+   
+    if (pattern1.test(emailcheck)) {
+      emailcheck.value = "";
+      alert("Login succefull");
+      // window.location.href = "index.html";
+     // window.open("index.html");
+    } else {
+      alert("Sorry Email id is not correct");
+      return false;
+    }
+
+    
+
+    if (pattern3.test(phonecheck)) {
+      phonecheck.value = "";
+      alert("Login succefull");
+      // window.location.href = "index.html";
+      window.open("home.html");
+    } else {
+      alert("Sorry valid phone number entered");
+      return false;
+    }
+    
+  }
+      
+      </script>
+      </body>
+      </html>

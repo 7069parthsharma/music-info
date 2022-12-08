@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21SDSCE01047-PARTH</title>
+    <link rel="stylesheet" href="./style3.css">
+    <script defer src="./index.js"></script>
+</head>
+<body>
+    <h2> <u> WORLD MUSIC INDUSTRY </u></h2>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#" id="sform">
+                <h1>Create Account</h1>
+              
+
+                <input type="text" placeholder="Name" id="sname">
+                <input type="email" placeholder="Email" id="semail">
+                <input type="password" placeholder="Password" id="spassword">
+                <button onclick="sign_checker()">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="/parth.html" id="form">
+                <h1>Sign in</h1>
+                
+                
+                <input type="email" placeholder="Email"  id="email" required>
+                <input type="password" placeholder="Password" id="password" required />
+                
+                <!-- <a href="index1.html" class="super-btn">Sign In</a> -->
+                <button class="super-btn" onclick="login_checker()">Sign In</a>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">  Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">  Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <script>
+    const login_checker = () =>{
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let Email_regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        let form = document.getElementById('form');
+        let Password_regex = /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/;
+        if(!email.match(Email_regex))
+        {
+            alert("Invalid Email");
+            form.action = "#";
+        }
+        else
+        {
+            if(!password.match(Password_regex))
+            {
+                form.action = "#";
+                alert("Invalid Password");
+            }
+            else
+            {
+                form.action = "parth.html"
+            }
+        }
+    }
+
+    const sign_checker = () =>{
+        let email = document.getElementById('semail').value;
+        let password = document.getElementById('spassword').value;
+        let name = document.getElementById('sname').value;
+        let Email_regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        let form = document.getElementById('sform');
+        let Password_regex = /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/;
+        let Name_regex = /^[a-zA-Z ]+$/;
+        if(!name.match(Name_regex))
+        {
+            alert("Invalid Name");
+        }
+        else
+        {
+            if(!email.match(Email_regex))
+            {
+                alert("Email Not Match");
+            }
+            else
+            {
+                if(!password.match(Password_regex))
+                {
+                    alert("Password Not Match");
+                }
+                else
+                {
+                    form.action = "index.html";
+                }
+            }
+        }
+    }
+   </script>
+</body>
+</html>

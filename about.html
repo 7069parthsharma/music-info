@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21SDSCE01047-PARTH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+</head>
+<body>
+    
+        <section class="sub-header">
+            <nav>
+                <a href="parth.html"><img src="images/music.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="parth.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="course.html">course</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="login.html">login</a></li>
+                   </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+           <h1>About Us</h1>
+ </section>
+
+
+ <section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>We Have World's Biggest Music industry</h1>
+            <p>The United States has remained the biggest market for recorded music in IFPI history,
+                 except in 2010 when Japan topped the list. The largest Asian music market, 
+                 Japan has always stayed within the top two. </p>
+                 <a href="" class="hero-btn red-btn">Explore Now</a>
+        </div>
+        <div class="about-col">
+            <img src="images/picture11.png">
+        </div>
+    </div>
+
+ </section>
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>In India, Music is initially considered as a co-curricular activity in school but after 12th one can
+         find different short term and long term courses.<br> Short term courses mostly include the certificate 
+         and the diploma courses and  the Long term courses include the degree courses <br> like the UG and PG courses.</p>
+      <p>CREATE BY PARTH SHARMA <i class="fa fa-heart-o"></i> </p>
+
+</section>
+
+
+
+
+ <!-------javascript for toggle menu------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>
